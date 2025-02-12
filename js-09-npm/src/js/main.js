@@ -1,4 +1,6 @@
-import "/src/css/styles.scss"
+import "/src/css/styles.scss";
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap';
 
 import { insertMainHeader } from "/src/modules/header/header";
 import { insertMainFooter } from "/src/modules/footer/footer";
@@ -12,7 +14,7 @@ import { welcome } from "../pages/welcome/welcome";
  * que el DOM (Document Object Model) y los recursos externos han terminado de cargarse.
  * 
  */
-window.addEventListener( "load", () => document.getElementById("app").innerHTML = `
+document.getElementById("app").innerHTML = `
 
     ${ insertMainHeader() } 
     <main class="container text-center my-4">
@@ -20,5 +22,5 @@ window.addEventListener( "load", () => document.getElementById("app").innerHTML 
     </main>
     ${ insertMainFooter() }
  `
-);
+
  
